@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        div#d1{
+            width: 200px;
+            height: 30%;
+            border: 2px groove blue;
+            background: grey;
+            color: white;
+            position: absolute;
+            left: -180px;
+            top: 35%;
+            box-shadow: 5px 5px 5px grey;
+        }
+        a{
+            display: block;
+            width: 80%;
+            border: 2px solid grey;
+            background: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+     <script>
+        x=-180;
+        function lw()
+        {
+            rh=Math.floor(Math.random()*document.documentElement.clientHeight);
+            rw=Math.floor(Math.random()*document.documentElement.clientWidth);
+
+            // w=document.documentElement.clientWidth;
+            // h=document.documentElement.clientHeight;
+            const d=document.getElementById("d1");
+            d.style.left=rh-300;
+            d.style.top=rw-300;
+            // d.style.top=x;
+            // if(x<=w-180)
+            // {
+            // x++;
+            // setTimeout(lw,100);
+            // }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="d1" onclick="lw()">div1
+    <a href="">Home</a>
+    <a href="">Home</a>
+    <a href="">Home</a>
+    <a href="">Home</a></div>
+    <button onclick="lw()">click me</button>
+    
+</body>
+</html>

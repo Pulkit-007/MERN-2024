@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img#m1{
+            width: 10%;
+            height: 15%;
+        }
+
+    </style>
+    <script>
+        var h=0;
+        function imageInvisible()
+        {
+            if(h==0)
+            {
+            var img = document.getElementById("m1");
+            // img.style.display="none";
+            img.style.visibility="hidden"
+            var b=document.getElementById("b1");
+            b.innerHTML="Visible ME"
+            h=1;
+            }
+            else{
+                var img = document.getElementById("m1");
+                img.style.visibility="visible";
+                var b=document.getElementById("b1");
+                b.innerHTML="Hide ME"
+                h=0;
+            }
+            r = setTimeout(imageInvisible,1000);
+        }
+        function stopBlink(){
+            clearTimeout(r);
+        }
+    </script>
+</head>
+<body onload="imageInvisible()">
+    <div id="d1" style="text-align: center;">
+    <img id="m1" src="PULKIT PHOTO.jpg" />
+    <br />
+    <button id="b1" onclick="imageInvisible()">hide me</button>
+    <button id="b2" onclick="stopBlink()">Stop me</button>
+    </div>
+    
+</body>
+</html>

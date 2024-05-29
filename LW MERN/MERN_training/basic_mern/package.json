@@ -1,0 +1,14 @@
+{
+  "name": "basic_mern",
+  "version": "1.0.0",
+  "description": "this is my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pulkit Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "superheros": "^1.0.0"
+  }
+}

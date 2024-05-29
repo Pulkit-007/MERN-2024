@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function a(){
+        //     alert("aaaaaaa");
+        //     b();
+        // }
+        // function b(){
+        //     alert("bbbbbb");
+        //     c();
+        // }
+        // function c(){
+        //     alert("cccccc");
+        //     a();
+        // }
+        // c();
+        var i=0;
+        function lw()
+        {
+            //base or stop condition
+            if(i<=100)
+            {
+                document.write(i);
+                document.write("<br />");
+                i++;
+                lw();
+            }
+        }
+        lw();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

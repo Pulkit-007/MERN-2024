@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i=1;
+        function lw()
+        {
+            const x=document.getElementById("d1");
+            // alert(x.className);
+            // x.className="newStyle";
+            // x.className+=" newStyle";
+            // x.src="PULKIT PHOTO.jpg";
+            x.src="pulkit"+i+".jpg";
+            i++;
+            if(i<=2)
+            {
+            r=setTimeout(lw,2000);
+            }
+            else{
+                i=1;
+                // clearTimeout(r);
+                r=setTimeout(lw,2000);
+            }
+
+        }
+        function lwStop()
+        {
+            clearTimeout(r);
+        }
+
+    </script>
+    <style>
+        .oldStyle{
+            background: grey;
+            color: pink;
+        }
+        .newStyle{
+            /* background: blue;
+            color: white; */
+            border: 2px solid green;
+        }
+        img#m1{
+            width: 200px;
+            height: 200px;
+            border: 2px solid aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1" class="oldStyle">div1</div>
+    <div>
+        <img id="m1" src="" />
+    </div>
+    <button onclick="lw()">click me</button>
+    <button onclick="lwStop()">stop me</button>
+    
+    
+</body>
+</html>

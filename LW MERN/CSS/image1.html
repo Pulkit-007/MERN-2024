@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img#m1{
+            width: 10%;
+            height: 15%;
+        }
+
+    </style>
+    <script>
+        function imageInvisible()
+        {
+            var img = document.getElementById("m1");
+            // img.style.display="none";
+            img.style.visibility="hidden"
+        }
+        function imageVisible()
+        {
+            var img = document.getElementById("m1");
+            img.style.visibility="visible";
+        }
+
+    </script>
+</head>
+<body>
+    <img id="m1" src="PULKIT PHOTO.jpg" />
+    <br />
+    <button onclick="imageInvisible()">hide me</button>
+    <button onclick="imageVisible()">show me</button>
+    
+</body>
+</html>

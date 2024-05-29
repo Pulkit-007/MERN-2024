@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function lw(){
+            var x=document.getElementById("d1");
+            // var y=x.innerHTML;
+            // alert(y);
+            x.style.color="red";
+            x.style.background="grey";
+            x.style.border="5px groove blue ";
+            x.style.width="100px";
+            x.style.height="100px";
+        }
+
+
+        function formv(){
+            var z=document.getElementById("d2");
+            // z.style.visibility="visible";
+            z.style.display="block";
+
+        }
+
+    </script>
+    <style>
+        div#d2{
+            /* visibility: hidden; */
+            display: none;
+            border: 2px double grey;
+            background: #e1e1e1;
+            width: 40%;
+            height: 40%;
+            position: absolute;
+            left: 10px;
+            top: 10px; 
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="d2">
+        <form>
+            Enter your name <input />
+            <br />
+            <input type="submit" />
+
+        </form>
+    </div>
+    <div id="d1"> this is para</div>
+
+    <script>
+        var r =setTimeout(formv,5000);
+        //alert(r) return interval ID
+        // clearTimeout(r);
+    </script>
+    <button onclick="lw()">click me</button>
+    
+</body>
+</html>

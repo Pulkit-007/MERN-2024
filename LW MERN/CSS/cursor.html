@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function lw(e)
+        {
+            x=e.clientX;
+            y=e.clientY;
+            document.getElementById("d2").innerHTML="Corr X: "+x+" Corr Y: "+y;
+            document.getElementById("d3").style.left=x+10;
+            document.getElementById("d3").style.top=y+10;
+            document.getElementById("d3").style.display="block";
+
+        }
+
+    </script>
+    <style>
+        div#d1{
+            width: 400px;
+            height: 400px;
+            background: grey;
+        }
+        div#d3{
+            display: none;
+            border: 2px solid grey;
+            background: black;
+            color: white;
+            width: 50px;
+            text-align: center;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1" onmousemove="lw(event)">this is di1</div>
+    <div id="d2"></div>
+    <div id="d3">PS</div>
+    
+</body>
+</html>
